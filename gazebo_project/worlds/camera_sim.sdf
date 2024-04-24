@@ -1,0 +1,35 @@
+<sdf version="1.7">
+    <world name="camera_sim">
+
+    <plugin
+      filename="ignition-gazebo-physics-system"
+      name="gz::sim::systems::Physics">
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre</render_engine>
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-user-commands-system"
+      name="gz::sim::systems::UserCommands">
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+
+        <include>
+            <uri>../models/ground_plane</uri>
+        </include>
+
+        <include>
+            <uri>../models/robot_model</uri>
+        </include>
+
+        <include>
+            <uri> https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun</uri>
+        </include>
+
+    </world>
+</sdf>
